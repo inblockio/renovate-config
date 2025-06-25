@@ -3,8 +3,8 @@
   "extends": [
     "config:recommended"
   ],
-  "prHourlyLimit":0,
-  "prConcurrentLimit":0,
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
   "osvVulnerabilityAlerts": true,
   "vulnerabilityAlerts": {
     "groupName": null,
@@ -16,5 +16,22 @@
     "branchTopic": "{{{datasource}}}-{{{depNameSanitized}}}-vulnerability",
     "prCreation": "immediate",
     "vulnerabilityFixStrategy": "lowest"
-  }
+  },
+  "packageRules": [
+    {
+      "matchManagers": "github-actions",
+      "automerge": true,
+      "matchUpdateTypes": [
+        "bump",
+        "digest",
+        "patch",
+        "minor",
+        "pin",
+        "pinDigest",
+        "replacement",
+        "rollback",
+        "lockFileMaintenance"
+      ]
+    }
+  ]
 }
