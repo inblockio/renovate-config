@@ -31,7 +31,8 @@
         "replacement",
         "rollback",
         "lockFileMaintenance"
-      ]
+      ],
+      "ignoreTests": true
     }
   ]
 }
